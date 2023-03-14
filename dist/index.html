@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News API</title>
+  <link rel="icon" href="https://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/32/Letter-N-icon.png" width="32" height="32">
+  <link rel="stylesheet" href="/index.b07a87f3.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="container header-container">
+    <a href="/index.html" class="logo__link">News</a>
+    <ul class="list-navigation">
+      <li class="list-navigation__item current-list__item"><span class="list-navigation__link" data-value="Home">Home</span></li>
+      <li class="list-navigation__item"><span class="list-navigation__link" data-value="Favorite">Favorite</span></li>
+      <li class="list-navigation__item"><span class="list-navigation__link" data-value="Read">Read</span></li>
+    </ul>
+    <form action="" class="search-form" autocomplete="off">
+      <input type="text" name="query" class="form__input-close" placeholder="Search">
+      <button type="submit" class="icon__button-hidden">
+        <svg width="20" height="20" class="search__icon-hidden">
+          <use href="/icons.adfc4680.svg#search"></use>
+        </svg>
+      </button>
+
+      <button type="button" class="js-button-search search__button-show">
+        <svg width="20" height="20">
+          <use href="/icons.adfc4680.svg#search"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="toggle-switch">
+      <svg width="21" height="21" class="switch-icon light">
+        <use href="/icons.adfc4680.svg#sun"></use>
+      </svg>
+      <p class="text-switch light">Light</p>
+      <span>
+        <label class="switch">
+          <input id="theme-switch" type="checkbox" class="input-switch">
+          <span class="slider round"></span>
+        </label>
+      </span>
+      <svg width="21" height="21" class="switch-icon dark">
+        <use href="/icons.adfc4680.svg#moon"></use>
+      </svg>
+      <p class="text-switch dark">Dark</p>
+    </div>
+    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="24" height="24" class="menu-icon">
+        <use href="/icons.adfc4680.svg#menu"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+  <main>
+    <section class="filter-container container">
+  <div class="categories">
+    <ul class="categories__btn-list"></ul>
+    <div class="menu">
+      <button class="categories__btn-menu invisible">
+        <span class="categories__btn-text "></span>
+        <svg class="categories__icon-up invisible" width="14" height="14">
+          <use href="/icons.adfc4680.svg#arrowUp"></use>
+        </svg>
+        <svg class="categories__icon-down" width="14" height="14">
+          <use href="/icons.adfc4680.svg#arrowDown"></use>
+        </svg>
+      </button>
+
+      <div class="categories__menu invisible">
+        <ul class="categories__list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <span class="filter-text">Search date news</span>
+
+  <div id="calendar-section" class="calendar">
+    <svg id="calendar_input_icon" class="calendar__icon" width="20px" height="20px" aria-label="menu">
+      <use class="calendar__menu" href="/icons.adfc4680.svg#calendar"></use>
+    </svg>
+
+    <input id="calendar" aria-expanded="false" class="calendar__input">
+    <svg id="calendar_down_arrow" class="calendar__arrow" width="9px" height="15px" aria-label="menu">
+      <use class="calendar__Down" href="/icons.adfc4680.svg#arrowDown"></use>
+    </svg>
+    <!-- <svg
+      id="calendar_up_arrow"
+      class="calendar__arrow hidden"
+      width="9px"
+      height="15px"
+      aria-label="menu"
+    >
+      <use class="calendar__Up" href="./images/icons.svg#arrowUp"></use>
+    </svg> -->
+  </div>
+</section>
+
+    <section class="card">
+    <div class="container">
+        <h2 class="card__title">News</h2>
+       <div class="card__content">
+
+<ul class="card__list">
+</ul>
+<div class="accordion">
+</div>
+</div>  
+</div>   
+    
+    
+</section>
+
+   
+    <div class="container not-found hidden">
+    <h2 class="not-found__header">We haven’t found news from<br> this category</h2>
+    <picture>
+      <source media="(min-width: 1280px)" srcset="/image_1.3db68db8.png 1x, /image_1@2x.f6d8a949.png 2x">
+    <source media="(min-width: 768px)" srcset="/image_2.2fc57f0c.png 1x, /image_2@2x.15207191.png 2x">
+      <source media="(max-width: 767px)" srcset="/image_3.2784de99.png 1x, /image_3@2x.9a5bea59.png 2x">
+      <img src="/image_1.3db68db8.png" alt="Not Found Picture" class="not-found__image">
+    </picture>
+</div>
+
+    <div class="page-container">
+    
+    <button class="prev-page" disabled="">Prev
+    </button>
+    <div id="pagination"></div>
+    <button class="next-page">Next
+    </button>
+    
+  </div>
+  </main>
+  <span class="loader"></span>
+  
+<footer class="footer"></footer>
+
+
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+        <svg width="24" height="24" class="cross__icon">
+            <use href="/icons.adfc4680.svg#cross"></use>
+        </svg>
+    </button>
+    <a href="/index.html" class="logo__link logo__link-menu">News</a>
+    <ul class="mobile-menu-list">
+        <li class="mobile-list__item menu-current__item js-home"><span class="menu-link" data-value="Home"><svg width="32" height="32" class="mobile-menu-icon">
+                    <use href="/icons.adfc4680.svg#home"></use>
+                </svg>Home<svg width="24" height="24" class="mobile-arrow-icon">
+                    <use href="/icons.adfc4680.svg#arrowRight"></use>
+                </svg></span></li>
+        <li class="mobile-list__item js-favorite"><span class="menu-link" data-value="Favorite"><svg width="32" height="32" class="mobile-menu-icon">
+                    <use href="/icons.adfc4680.svg#favorite"></use>
+                </svg>Favorite<svg width="22" height="22" class="mobile-arrow-icon">
+                    <use href="/icons.adfc4680.svg#arrowRight"></use>
+                </svg></span></li>
+        <li class="mobile-list__item js-read"><span class="menu-link" data-value="Read"><svg width="32" height="32" class="mobile-menu-icon">
+                    <use href="/icons.adfc4680.svg#read"></use>
+                </svg>Read<svg width="24" height="24" class="mobile-arrow-icon">
+                    <use href="/icons.adfc4680.svg#arrowRight"></use>
+                </svg></span></li>
+    </ul>
+    <div class="toggle-switch toggle-switch__menu">
+        <svg width="21" height="21" class="switch-icon light">
+            <use href="/icons.adfc4680.svg#sun"></use>
+        </svg>
+        <span>
+            <label class="switch">
+                <input id="theme-switch" type="checkbox" class="input-switch">
+                <span class="slider round"></span>
+            </label>
+        </span>
+        <svg width="21" height="21" class="switch-icon dark">
+            <use href="/icons.adfc4680.svg#moon"></use>
+        </svg>
+    </div>
+</div>
+
+  <script src="/index.975ef6c8.js" defer=""></script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
+  <script src="/index.975ef6c8.js" defer=""></script>
+</body>
+
+</html>
